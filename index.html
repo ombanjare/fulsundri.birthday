@@ -5,105 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Fulsundri!</title>
     <style>
-        /* 🔥 Stylish CSS */
+        /* 📱 Mobile-Optimized CSS */
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(45deg, #8dabff, #51ffe5);
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             min-height: 100vh;
+            overflow-x: hidden;
             color: #fff;
             text-align: center;
-            overflow: hidden;
+            position: relative;
+            background: linear-gradient(45deg, #8dabff, #51ffe5);
+        }
+        
+        /* 🌟 Floating Background Images */
+        .bg-image {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            opacity: 0.8;
+            z-index: 1;
+            object-fit: cover;
         }
         
         .container {
-            background: rgba(33, 69, 103, 0.7);
-            padding: 20px;
+            background: rgba(33, 69, 103, 0.85);
+            padding: 15px;
             border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
             position: relative;
-            overflow: hidden;
-        }
-        
-        h2 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px #000;
-        }
-        
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-        
-        .btn {
-            background: #d06bff;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            font-size: 1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
-        }
-        
-        .btn:hover {
-            background: #ff4757;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
-        }
-        
-        .hearts {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: -1;
-        }
-        
-        .heart {
-            position: absolute;
-            font-size: 20px;
-            animation: float 6s ease-in-out infinite;
-            opacity: 0;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 0;
-                bottom: -10%;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-500px) rotate(360deg);
-                opacity: 0;
-                bottom: 110%;
-            }
+            z-index: 10;
         }
         
         .photo-frame {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            border: 5px solid #ff6b6b;
-            margin: 0 auto 20px;
+            border: 4px solid #ff6b6b;
+            margin: 0 auto 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
         }
         
         .photo-frame img {
@@ -111,11 +57,72 @@
             height: 100%;
             object-fit: cover;
         }
+        
+        h2 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            background: #d06bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 3px 10px rgba(208, 107, 255, 0.4);
+        }
+        
+        .btn:hover {
+            background: #ff4757;
+            transform: translateY(-2px);
+        }
+        
+        .hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 5;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 16px;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; bottom: -10%; }
+            100% { transform: translateY(-500px) rotate(360deg); opacity: 0; bottom: 110%; }
+        }
     </style>
 </head>
 <body>
+    <!-- 🖼️ 8 Floating Background Images -->
+    <img class="bg-image" src="https://1drv.ms/i/c/b3844cbe62ba9b3d/IQRmGUBfve4gRbC9oPTZhp65ASOqYVClG7y8C6tl-cixkkU?width=1024" alt="Memory 1" style="top: 10%; left: 5%; animation: move1 25s infinite;">
+    <img class="bg-image" src="https://1drv.ms/i/c/b3844cbe62ba9b3d/IQTApmJ8UlphQo528HnM1-jHAV2FcFoV_9RwUAYCkgMorTI?width=224&height=299" alt="Memory 2" style="top: 70%; left: 80%; animation: move2 30s infinite;">
+    <img class="bg-image" src="https://1drv.ms/i/c/b3844cbe62ba9b3d/IQQIOlK4VH_fQqEyg5gI8-QhAewDhAC8BGK-nhMB-u1Jj0A?width=224&height=299" alt="Memory 3" style="top: 30%; left: 60%; animation: move3 28s infinite;">
+    <img class="bg-image" src="https://1drv.ms/i/c/b3844cbe62ba9b3d/IQRrtjy3WJtNTbmEYwOcCYd-AWG_QLKnhJSWKkCFI3wVICY?width=224&height=299" alt="Memory 4" style="top: 80%; left: 20%; animation: move4 22s infinite;">
+    <img class="bg-image" src="https://1drv.ms/i/c/b3844cbe62ba9b3d/IQQOWRBdaGnSQbNcnW7QQJ0-AdPkOwBZ4XZhgZOjB8raF-o?width=232&height=174" alt="Memory 5" style="top: 20%; left: 75%; animation: move5 35s infinite;">
+    <img class="bg-image" src="https://1drv.ms/i/c/b3844cbe62ba9b3d/IQTMTXCmXkAtQLuB7B0BIj4xAXqBl-9eZsMgUpBFg3N6em8?width=224&height=299" alt="Memory 6" style="top: 65%; left: 10%; animation: move6 27s infinite;">
+    <img class="bg-image" src="https://1drv.ms/i/c/b3844cbe62ba9b3d/IQR1_AkgtGbwSZoKxxg4asAkAWX2Bcq18EUeYzMJb4MKKBA?width=224&height=299" alt="Memory 7" style="top: 40%; left: 85%; animation: move7 32s infinite;">
+   
+
+    <!-- 💌 Main Content -->
     <div class="container">
-        <!-- Photo Frame - Replace with Fulsundri's Photo -->
         <div class="photo-frame">
             <img src="https://1drv.ms/i/c/b3844cbe62ba9b3d/IQRTFbP_KznmRa2GmClhwiZxARIxhhB7JqyQIg9rSWnZnGs?width=280&height=373" alt="Fulsundri">
         </div>
@@ -126,54 +133,87 @@
         
         <button class="btn" id="surpriseBtn">Surprise For You!</button>
         
-        <!-- Floating Hearts -->
+        <!-- ❤️ Floating Hearts -->
         <div class="hearts" id="heartsContainer"></div>
     </div>
 
     <script>
-        // 🎂 Interactive JavaScript
+        // 🚀 JavaScript for Animations
         const surpriseBtn = document.getElementById('surpriseBtn');
         const heartsContainer = document.getElementById('heartsContainer');
         
-        // Create floating hearts
+        // Add animation styles for 8 images
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes move1 {
+                0% { transform: translate(0, 0) rotate(0deg); }
+                50% { transform: translate(40vw, 30vh) rotate(180deg); }
+                100% { transform: translate(0, 0) rotate(360deg); }
+            }
+            @keyframes move2 {
+                0% { transform: translate(0, 0) rotate(0deg); }
+                50% { transform: translate(-50vw, -20vh) rotate(-120deg); }
+                100% { transform: translate(0, 0) rotate(0deg); }
+            }
+            @keyframes move3 {
+                0% { transform: translate(0, 0) rotate(0deg); }
+                50% { transform: translate(30vw, -15vh) rotate(150deg); }
+                100% { transform: translate(0, 0) rotate(0deg); }
+            }
+            @keyframes move4 {
+                0% { transform: translate(0, 0) rotate(0deg); }
+                50% { transform: translate(-30vw, 40vh) rotate(-90deg); }
+                100% { transform: translate(0, 0) rotate(0deg); }
+            }
+            @keyframes move5 {
+                0% { transform: translate(0, 0) rotate(0deg); }
+                50% { transform: translate(60vw, 25vh) rotate(240deg); }
+                100% { transform: translate(0, 0) rotate(360deg); }
+            }
+            @keyframes move6 {
+                0% { transform: translate(0, 0) rotate(0deg); }
+                50% { transform: translate(-20vw, 50vh) rotate(-60deg); }
+                100% { transform: translate(0, 0) rotate(0deg); }
+            }
+            @keyframes move7 {
+                0% { transform: translate(0, 0) rotate(0deg); }
+                50% { transform: translate(70vw, -10vh) rotate(200deg); }
+                100% { transform: translate(0, 0) rotate(360deg); }
+            }
+
+        `;
+        document.head.appendChild(style);
+        
+        // Floating Hearts
         function createHeart() {
             const heart = document.createElement('div');
             heart.innerHTML = '❤️';
             heart.classList.add('heart');
-            
-            // Random position
             heart.style.left = Math.random() * 100 + '%';
             heart.style.animationDuration = Math.random() * 3 + 3 + 's';
-            heart.style.fontSize = Math.random() * 20 + 10 + 'px';
-            
             heartsContainer.appendChild(heart);
             
-            // Remove heart after animation
             setTimeout(() => {
                 heart.remove();
             }, 6000);
         }
         
-        // Surprise button click
+        // Surprise Button
         surpriseBtn.addEventListener('click', () => {
-            // Create multiple hearts
+            surpriseBtn.disabled = true;
             for(let i = 0; i < 30; i++) {
                 setTimeout(createHeart, i * 100);
             }
-            
-            // Change button text
             surpriseBtn.textContent = 'I Love You! ❤️';
-            surpriseBtn.style.background = '#ff4757';
-            
-            // Confetti effect (simple version)
             setTimeout(() => {
-                alert('तुम्हारे बिना मेरी जिंदगी अधूरी है! 💘');
+                alert('फूलसुंदरी तै मोर् जान हस रे जान 💘');
+                surpriseBtn.disabled = false;
             }, 1500);
         });
         
-        // Create some random hearts on load
+        // Initial hearts
         for(let i = 0; i < 10; i++) {
-            setTimeout(createHeart, i * 300);
+            setTimeout(createHeart, i * 400);
         }
     </script>
 </body>
